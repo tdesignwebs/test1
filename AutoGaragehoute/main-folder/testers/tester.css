@@ -1,0 +1,103 @@
+  body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: rgb(19 23 34);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+  }
+
+  .showcase-container {
+      background-image: url(ss/backgrounds/background-5.png);
+      background-repeat: inherit;
+      background-position: calc(100% - 170px) center;
+      background-size: cover;
+      border: 1px solid rgba(95, 95, 95, 0.603);
+      padding: 20px;
+      border-radius: 15px;
+      display: flex;
+      justify-content: space-between;
+      height: 70vh;
+      align-items: center;
+      width: 100%;
+      background-color: #0f131d;
+      max-width: 1500px;
+  }
+
+  .showcase-images {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .chart {
+      border-radius: 10px;
+      margin: 0 0 0 110px;
+      box-shadow: 0 0 10px rgba(46, 46, 46, 0.288);
+  }
+
+  .large-chart {
+      width: 700px;
+      height: auto;
+      border: 1px solid rgba(134, 134, 134, 0.534);
+  }
+
+  .small-chart {
+      width: 350px;
+      height: auto;
+      margin-top: -50px;
+      margin-left: -320px;
+      border: 1px solid rgba(134, 134, 134, 0.534);
+  }
+
+  .text-area {
+      color: rgb(255, 255, 255);
+      text-align: start;
+      margin-right: 90px;
+      max-width: 500px;
+      margin-top: -60px;
+  }
+
+  .text-area h1 {
+      font-size: 3em;
+      background: linear-gradient(80deg, #ff8a00, #ff00d6, #9200ff);
+      -webkit-background-clip: text;
+      color: transparent;
+      margin: 0;
+      margin-bottom: 30px;
+  }
+
+  .text-area p {
+      font-size: 1.2em;
+      margin: 10px 0 30px;
+  }
+
+  .start-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #1c2131;
+      color: rgb(255, 255, 255);
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bolder;
+      margin-top: 20px;
+      width: 150px;
+      text-align: center;
+      border: 1px solid gray;
+      font-size: 1.1em;
+      transition: transform 0.5s ease-in-out;
+      /* Added transition property here */
+
+  }
+
+  .start-button:hover {
+      background-color: #1c2131;
+      transform: scale(1.1);
+      box-shadow: 0 0px 16px 3px rgba(60, 117, 155, 0.932);
+
+  }
+
+  .start-button:active {
+      background-color: #525252c7;
+  }

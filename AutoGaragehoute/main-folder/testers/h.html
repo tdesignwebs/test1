@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <title>AutoServiceHoute</title>
+  <style>
+    body {
+      padding: 0;
+      background: #000319;
+      margin: 0;
+      z-index: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .background-1 {
+      background: url(ss/backgrounds/background-2.png);
+      justify-content: center;
+      background-position: center;
+      background-size: cover;
+      height: 200vh;
+      align-items: start;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+
+    .page-1 {
+      background-color: #d1d1d100;
+      padding: 90px 0px 0px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0px;
+    }
+
+    .page-1 .page-1-layout {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .page-1 .page-1-layout h3 {
+      margin-top: 10px;
+      font-weight: bold;
+      max-width: 900px;
+      font-size: 4.5rem;
+      color: rgb(255, 255, 255);
+    }
+
+    .page-1 .page-1-layout p {
+      color: rgb(255, 255, 255);
+      font-size: 1.5rem;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-top: 30px;
+      max-width: 550px;
+    }
+
+    .page-showcase-1 {
+      display: flex;
+      align-items: center;
+      max-width: 1300px;
+      justify-content: center;
+    }
+
+    .box-showcase {
+      width: 950px;
+      background-color: #1C2131;
+      background-repeat: no-repeat;
+      margin-top: 0px;
+      height: 500px;
+      border-radius: 20px;
+      border: 2px solid #595959;
+      overflow: hidden;
+      position: relative;
+      transition: background-color 0.5s ease;
+    }
+
+    .showcase-video-png {
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      position: absolute;
+      transition: opacity 1s ease-in-out;
+      opacity: 0;
+    }
+
+    .showcase-video-png.active {
+      opacity: 1;
+    }
+
+    .transition-bg {
+      background-color: rgba(255, 255, 255, 0.795);
+    }
+
+    .showcase-container {
+      background-image: url('ss/backgrounds/background-4.png');
+      background-position: -530px -180px;
+      background-repeat: no-repeat;
+      /* Move the background 20 pixels to the left and 10 pixels from the top */
+      background-size: cover;
+      border: 1px solid rgba(95, 95, 95, 0.603);
+      padding: 20px;
+      border-radius: 15px;
+      display: flex;
+      justify-content: space-between;
+      height: 600px;
+      /* Ensures it has a set height */
+      min-height: 600px;
+      /* Prevents shrinking below this height */
+      align-items: center;
+      width: 100%;
+      background-color: #0f131d;
+      max-width: 1500px;
+    }
+
+    .showcase-images {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .chart {
+      border-radius: 10px;
+      margin: 0 0 0 110px;
+      box-shadow: 0 0 10px rgba(46, 46, 46, 0.288);
+    }
+
+    .large-chart {
+      width: 700px;
+      height: auto;
+      border: 1px solid rgba(134, 134, 134, 0.534);
+    }
+
+    .small-chart {
+      width: 350px;
+      height: auto;
+      margin-top: -50px;
+      margin-left: -320px;
+      border: 1px solid rgba(134, 134, 134, 0.534);
+    }
+
+    .text-area {
+      color: rgb(255, 255, 255);
+      text-align: start;
+      margin-right: 90px;
+      max-width: 500px;
+      margin-top: -60px;
+    }
+
+    .text-area h1 {
+      font-size: 3em;
+      background: linear-gradient(80deg, #473a2a, #ff00d6, #9200ff);
+      -webkit-background-clip: text;
+      color: transparent;
+      margin: 0;
+      margin-bottom: 30px;
+    }
+
+    .text-area p {
+      font-size: 1.2em;
+      margin: 10px 0 30px;
+    }
+
+    .start-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #1c2131;
+      color: rgb(255, 255, 255);
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bolder;
+      margin-top: 20px;
+      width: 150px;
+      text-align: center;
+      border: 1px solid gray;
+      font-size: 1.1em;
+      transition: transform 0.5s ease-in-out;
+      /* Added transition property here */
+
+    }
+
+    .start-button:hover {
+      background-color: #1c2131;
+      transform: scale(1.1);
+      box-shadow: 0 0px 16px 3px rgba(60, 117, 155, 0.932);
+
+    }
+
+    .start-button:active {
+      background-color: #525252c7;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+
+
+    <div class="navbar">
+      <div class="navbar-items">
+
+        <a class="navbar-text" href="#">Home</a>
+        <a class="navbar-text" href="#">APK</a>
+        <a class="navbar-text" href="#">Onderhoud</a>
+        <a class="navbar-text" href="#">Feedback</a>
+      </div>
+    </div>
+
+
+
+  </nav>
+
+
+
+  <div class="background-1">
+
+    <div class="page-1" id="page-1">
+      <div class="page-1-layout">
+        <h3>We repair cars and make them fancy</h3>
+        <p>
+          Unlock the most powerful website's for business with 100,000+ people globally
+        </p>
+      </div>
+    </div>
+    <div class="page-showcase-1">
+      <div class="box-showcase" id="box-showcase">
+        <img class="showcase-video-png active" src="ss/showcase/showcase-4.webp" alt="Showcase Image 1">
+        <img class="showcase-video-png" src="ss/showcase/showcase_6.png" alt="Showcase Image 2">
+        <img class="showcase-video-png" src="ss/showcase/showcase_4.png" alt="Showcase Image 3">
+        <img class="showcase-video-png" src="ss/showcase/showcase-6.webp" alt="Showcase Image 4">
+        <img class="showcase-video-png" src="ss/showcase/showcase_5.png" alt="Showcase Image 5">
+      </div>
+    </div>
+
+
+    <div class="showcase-container">
+      <div class="showcase-images">
+        <img src="ss/showcase/showcase_1.png" class="chart large-chart">
+        <img src="ss/showcase/showcase_2.png" class="chart small-chart">
+      </div>
+
+
+      <div class="text-area">
+        <h1>Easy build powerful websites</h1>
+        <p>Our team is creating modern websites for your webshop, bussiness in days </p>
+        <a href="#" class="start-button">Unlock Access</a>
+      </div>
+    </div>
+
+
+
+
+
+
+  </div>
+
+
+  <div class="background-1">
+
+  </div>
+
+
+  <script src="script.js">
+
+  </script>
+</body>
+
+<script>
+  const images = document.querySelectorAll('.showcase-video-png');
+  const showcaseBox = document.getElementById('box-showcase');
+  let currentIndex = 0;
+
+  function changeImage() {
+    showcaseBox.classList.add('transition-bg');
+    images[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].classList.add('active');
+    setTimeout(() => {
+      showcaseBox.classList.remove('transition-bg');
+    }, 500); // Duration of the background color effect
+  }
+
+  setInterval(changeImage, 2000);
+</script>
+
+</html>

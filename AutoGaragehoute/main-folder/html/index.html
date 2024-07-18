@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar/navbar-1.css">
+    <link rel="stylesheet" href="../css/showcase/showcase-1.css">
+    <link rel="stylesheet" href="../css/showcase/showcase-2.css">
+    <link rel="stylesheet" href="../css/showcase/showcase-3.css">
+    <link rel="stylesheet" href="../css/button/button-1.css">
+    <title>AutoServiceHoute</title>
+
+</head>
+
+<body>
+
+    <nav>
+
+
+        <div class="navbar">
+            <div class="navbar-items">
+
+                <a class="navbar-text" href="#">Home</a>
+                <a class="navbar-text" href="#">APK</a>
+                <a class="navbar-text" href="#">Onderhoud</a>
+                <a class="navbar-text" href="#">Feedback</a>
+            </div>
+        </div>
+
+
+
+    </nav>
+
+
+
+    <div class="background-1">
+
+        <div class="page-1" id="page-1">
+            <div class="page-1-layout">
+                <h3>We repair cars and make them fancy</h3>
+                <p>
+                    Unlock the most powerful website's for business with 100,000+ people globally
+                </p>
+                <a href="#" class="start-button-1">Get 30 Days Risk Free</a>
+            </div>
+        </div>
+        <div class="page-showcase-1">
+            <div class="box-showcase" id="box-showcase">
+                <img class="showcase-video-png active" src="../images/showcase/showcase-4.webp" alt="Showcase Image 1">
+                <img class="showcase-video-png" src="../images/showcase/showcase_6.png" alt="Showcase Image 2">
+                <img class="showcase-video-png" src="../images/showcase/showcase_4.png" alt="Showcase Image 3">
+                <img class="showcase-video-png" src="../images/showcase/showcase-6.webp" alt="Showcase Image 4">
+                <img class="showcase-video-png" src="../images/showcase/showcase_5.png" alt="Showcase Image 5">
+            </div>
+        </div>
+
+
+
+
+
+
+
+        
+
+
+        <div class="showcase-container">
+            <div class="showcase-images">
+                <img src="../images/showcase/showcase_1.png" class="chart large-chart">
+                <img src="../images/showcase/showcase_2.png" class="chart small-chart">
+            </div>
+
+
+            <div class="text-area">
+                <h1>Easy build powerful websites</h1>
+                <p>Our team is creating modern websites for your webshop, bussiness in days </p>
+                <a href="#" class="start-button">Unlock Access</a>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div class="showcase-container-2">
+         
+
+            <div class="text-area-2">
+                <h1> easy build <span class="any">most</span> <span class="any-1">powerful websites</span></h1>
+                <p>Our team is creating modern websites for your webshop, bussiness in days </p>
+                <a href="#" class="start-button">Unlock Access</a>
+            </div>
+            <div class="showcase-images-2">
+                <img src="../images/showcase/showcase_1.png" class="chart-2 large-chart-2">
+                <img src="../images/showcase/showcase_2.png" class="chart-2 small-chart-2">
+            </div>
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+
+    <script src="script.js">
+
+    </script>
+</body>
+
+<script>
+    const images = document.querySelectorAll('.showcase-video-png');
+    const showcaseBox = document.getElementById('box-showcase');
+    let currentIndex = 0;
+
+    function changeImage() {
+        showcaseBox.classList.add('transition-bg');
+        images[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].classList.add('active');
+        setTimeout(() => {
+            showcaseBox.classList.remove('transition-bg');
+        }, 500); // Duration of the background color effect
+    }
+
+    setInterval(changeImage, 2000);
+</script>
+
+
+
+
+
+
+</html>
